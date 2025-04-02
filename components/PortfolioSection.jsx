@@ -10,7 +10,7 @@ const companies = [
   { name: "Skywall", logo: "/skywall.webp" },
   { name: "Lemanda Chocolate House", logo: "/lemanda.webp" },
   { name: "Mentor Education", logo: "/mentor.png" },
-  { name: "AstroNarad", logo: "/astronarad.png" },
+  { name: "AstroNarad", logo: "/ag.png" },
   { name: "NSNP L2 Health", logo: "/nslp.png" },
   { name: "Mr.Loanji", logo: "/loanji.png" },
   { name: "Tax Rishi", logo: "/tax.png" },
