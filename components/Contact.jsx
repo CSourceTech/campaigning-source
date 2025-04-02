@@ -20,7 +20,7 @@ export default function Component() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_9bzyutl', 'template_r938qvo', form.current, 'Rv5e_uBZzEM1DIk9W')
+        emailjs.sendForm('service_n0tshcg', 'template_r938qvo', form.current, 'Rv5e_uBZzEM1DIk9W')
             .then((result) => {
                 createAlert('Message Sent Successfully!');
                 console.log(result.text);
