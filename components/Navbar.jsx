@@ -27,6 +27,11 @@ const navItems = [
     },
     {
         id: 3,
+        name: "Portfolio",
+        path: "/portfolio",
+    },
+    {
+        id: 4,
         name: "Pricing",
         path: "/pricing",
     },
