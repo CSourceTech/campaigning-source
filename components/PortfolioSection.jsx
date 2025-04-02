@@ -70,7 +70,7 @@ const CompanyCard = ({ company, index }) => {
   );
 };
 
-function Portfolio() {
+function PortfolioSection() {
   const [sectionRef, sectionInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -220,4 +220,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default PortfolioSection;
