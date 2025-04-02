@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import Head from "next/head";
+import PortfolioSection from "@/components/PortfolioSection";
 
 function Portfolio() {
   const slides = [
@@ -38,7 +39,7 @@ function Portfolio() {
       title: "AstroNarad",
       description: "Campaigning Source did an exceptional job designing AstroNarad.com! They created a mystical yet professional astrology platform that perfectly reflects our brand. The website combines beautiful visuals with excellent functionality, featuring seamless consultation bookings, fast loading speeds, and intuitive navigation. What impressed us most was how they made complex astrological content accessible while maintaining a spiritually uplifting aesthetic. Their team understood our unique needs perfectly and delivered a site that exceeds our expectations in every way. We highly recommend their services for any spiritual or astrology-based business looking for a transformative online presence.",
       heading: 'AstroNarad Website Design Story',
-      img: "/Astronarad.png"
+      img: "/Aastronarad.png"
     },
     {
       title: "NSNP L2 Health",
@@ -99,7 +100,7 @@ function Portfolio() {
         <meta name="description" content="Portfolio page showcasing our work." />
       </Head>
       <Layout>
-        <div className="relative w-full pt-16 h-auto flex overflow-hidden justify-center items-center bg-black text-white">
+        <div className="relative w-full pt-16 flex-col h-auto flex overflow-hidden justify-center items-center bg-[#191919] text-white">
           <div className="w-full max-w-8xl overflow-hidden relative">
             <div
               className="flex transition-transform duration-700 ease-in-out"
@@ -111,15 +112,15 @@ function Portfolio() {
                     {item.title}
                   </h2>
                   <p className="sm:text-lg mt-4 text-[#636975] md:text-2xl">{item.title} Case Study</p>
-                  <div className="w-full h-auto flex flex-col sm:flex-row justify-between mt-7">
-                    <div className="w-full md:w-1/2 h-auto flex flex-col">
+                  <div className="w-full h-auto flex flex-col md:flex-row justify-between mt-7 md:gap-6">
+                    <div className="w-full md:w-[45%] h-auto flex flex-col">
                       <p className="mt-4 text-xl sm:text-3xl md:text-5xl font-bold text-center md:text-start">{item.heading}</p>
                       <p className="mt-4 md:mt-8 text-[#6D6D6D] text-sm md:text-lg text-center md:text-start">{item.description}</p>
                     </div>
                     <img
                       src={item.img}
                       alt={item.title}
-                      className="mt-6 w-full sm:w-[40%] h-80 md:h-96 object-contain rounded-xl"
+                      className="mt-6 w-full md:w-[50%] mx-auto h-auto md:h-96 object-contain rounded-xl"
                     />
                   </div>
                 </div>
@@ -127,6 +128,7 @@ function Portfolio() {
             </div>
           </div>
         </div>
+        <PortfolioSection />
       </Layout>
     </>
   );
