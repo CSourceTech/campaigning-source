@@ -16,8 +16,13 @@ const Contact = () => {
 
   const createAlert = (message) => {
     const alertBox = document.querySelector(".alert");
+    if (!alertBox) {
+      console.error("Alert box not found!");
+      return;
+    }
     alertBox.innerHTML = message;
     alertBox.style.display = "block";
+  
     setTimeout(() => {
       alertBox.style.display = "none";
     }, 3000);
@@ -28,15 +33,16 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_9bzyutl",
+        "service_n0tshcg",
         "template_r938qvo",
         form.current,
-        "Rv5e_uBZzEM1DIk9W"
+        "lSYWSkzq6KSqHXk_R"
       )
       .then(
         (result) => {
           createAlert("Message Sent Successfully!");
           console.log(result.text);
+          form.current.reset();
         },
         (error) => {
           createAlert("Message Sending Failed!, Try Again Later!");
@@ -58,6 +64,10 @@ const Contact = () => {
         <main className="flex flex-col items-center justify-center min-h-screen py-12">
           <div className="flex flex-col md:flex-row w-11/12 gap-6 max-w-6xl p-8 space-y-8 bg-gray-700 backdrop-blur-sm rounded-lg shadow-md">
             <div className="w-full md:w-1/2 space-y-8">
+              <div className="alert hidden text-center p-4 bg-green-500 text-white rounded-md">
+                Message Sent Successfully!
+              </div>
+
               <h2 className="text-3xl font-bold text-center tracking-wider">Contact Us</h2>
               <form className="space-y-6 " ref={form} onSubmit={sendEmail}>
                 <div className="space-y-2 ">
